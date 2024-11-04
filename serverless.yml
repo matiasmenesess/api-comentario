@@ -11,7 +11,7 @@ provider:
     role: arn:aws:iam::344494306973:role/LabRole
   environment:
     TABLE_NAME: ${sls:stage}-t_comentarios 
-    INGEST_BUCKET_NAME: ${self:service}-${sls:stage}-bucket-ingesta
+    INGEST_BUCKET_NAME: ${self:service}-${sls:stage}-bucket-ingesta123
 
 functions:
   crear:
@@ -25,10 +25,10 @@ functions:
 
 resources:
   Resources:
-    BucketIngesta:
+    BucketIngesta123:
         Type: AWS::S3::Bucket
         Properties:
-            BucketName: ${self:service}-${sls:stage}-bucket-ingesta
+            BucketName: ${self:service}-${sls:stage}-bucket-ingesta123
     TablaComentarios:
       Type: AWS::DynamoDB::Table
       Properties:
